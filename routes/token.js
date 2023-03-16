@@ -7,7 +7,7 @@ router.post("/", async (req, res) => {
   console.log("token", code);
 
   const spotifyApi = new SpotifyWebApi({
-    redirectUri: "https://audiobrew.onrender.com/me",
+    redirectUri: "https://audiobrew.netlify.app/me",
     clientId: process.env.CLIENT_ID,
     clientSecret: process.env.CLIENT_SECRET,
   });

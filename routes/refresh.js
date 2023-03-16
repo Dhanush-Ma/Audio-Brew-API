@@ -6,7 +6,7 @@ router.post("/", async (req, res) => {
   const refreshToken = req.body.refreshToken;
   console.log("hi");
   const spotifyApi = new SpotifyWebApi({
-    redirectUri: "http://localhost:3000/me",
+    redirectUri: "https://audiobrew.netlify.app/me",
     clientId: process.env.CLIENT_ID,
     clientSecret: process.env.CLIENT_SECRET,
     refreshToken,
