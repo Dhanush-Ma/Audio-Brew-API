@@ -16,7 +16,7 @@ router.post("/", async (req, res) => {
     existingUser.password
   );
   if (!validPassword) {
-    return res.status(400).send("Password doesn't match our records!");
+    return res.status(400).send("Incorrect Password!");
   }
 
   // SET JWT TOKEN

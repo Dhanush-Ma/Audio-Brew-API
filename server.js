@@ -1,10 +1,6 @@
 const express = require("express");
 const cors = require("cors");
-const crypto = require("crypto");
 const mongoose = require("mongoose");
-const multer = require("multer");
-const { GridFsStorage } = require("multer-gridfs-storage");
-const Grid = require("gridfs-stream");
 const dotenv = require("dotenv").config();
 const bodyParser = require("body-parser");
 const port = process.env.PORT;
