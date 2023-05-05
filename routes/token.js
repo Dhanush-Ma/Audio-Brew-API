@@ -1,13 +1,13 @@
 const express = require("express");
 const router = express.Router();
+const redirectUri = require("./utilities/redirectUri");
 const SpotifyWebApi = require("spotify-web-api-node");
 
 router.post("/", async (req, res) => {
   const code = req.body.code;
-  console.log("token", code);
 
   const spotifyApi = new SpotifyWebApi({
-    redirectUri: "https://audiobrew.netlify.app/me",
+    redirectUri,
     clientId: process.env.CLIENT_ID,
     clientSecret: process.env.CLIENT_SECRET,
   });
@@ -22,7 +22,6 @@ router.post("/", async (req, res) => {
       });
     })
     .catch((err) => {
-      console.log(err);
       res.status(400).send(err);
     });
 });

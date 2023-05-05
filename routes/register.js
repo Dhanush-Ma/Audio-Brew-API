@@ -10,7 +10,6 @@ router.post("/", async (req, res) => {
 
   if (existingUser) return res.status(409).send("User is already registered!");
 
-  console.log(req.body);
   const id = new mongoose.Types.ObjectId();
   const user = await new Users({
     _id: id,
